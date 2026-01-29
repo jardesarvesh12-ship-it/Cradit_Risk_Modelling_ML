@@ -19,10 +19,11 @@ a2 = pd.read_excel("C:\\Users\\jarde\\OneDrive\\Desktop\\Cradit_Risk_Modelling\\
 df1 = a1.copy()
 df2 = a2.copy()
 
-# Remove nulls
+# Remove nulls df1
 df1 = df1.loc[df1['Age_Oldest_TL'] != -99999]
 
 
+#  remove null df2
 columns_to_be_removed = []
 for i in df2.columns:
     if df2.loc[df2[i] == -99999].shape[0] > 10000:
@@ -41,6 +42,9 @@ for i in list(df1.columns):
 
 # Merge the two dataframes, inner join so that no nulls are present
 df = pd. merge ( df1, df2, how ='inner', left_on = ['PROSPECTID'], right_on = ['PROSPECTID'] )
+
+
+
 
 # check how many columns are categorical
 for i in df.columns:
