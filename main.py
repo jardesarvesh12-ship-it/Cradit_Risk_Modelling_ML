@@ -8,7 +8,7 @@ import xgboost as xgb
 
 
 
-df = pd.read_excel ("C:\\Users\\rohu1\\Desktop\\depv1\\EPS_Dataset.xlsx",'v8')
+df = pd.read_excel (r"D:\PROJECTS\2.Cradit_Risk_Modelling_ML\EPS_Dataset.xlsx",'v8')  #C:\\Users\\rohu1\\Desktop\\depv1\\EPS_Dataset.xlsx
 df = df. drop( ['Bank name', 'Year'] , axis=1)
 
 
